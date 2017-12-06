@@ -5,27 +5,15 @@ export default class {
     this.c = present[2]
   }
 
-  get area () {
-    return 2 * (this.a * this.b + this.b * this.c + this.a * this.c)
-  }
-
-  get extra () {
-    return this.a * this.b
-  }
-
   get areaAndExtra () {
-    return this.area + this.extra
-  }
-
-  get ribbon () {
-    return 2 * this.a + 2 * this.b
-  }
-
-  get ribbonExtra () {
-    return this.a * this.b * this.c
+    const area = 2 * (this.a * this.b + this.b * this.c + this.a * this.c)
+    const extra = this.a * this.b
+    return area + extra
   }
 
   get ribbonAndExtra () {
-    return this.ribbon + this.ribbonExtra
+    const ribbon = 2 * this.a + 2 * this.b
+    const extra = this.a * this.b * this.c
+    return ribbon + extra
   }
 }
